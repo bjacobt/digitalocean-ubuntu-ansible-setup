@@ -1,0 +1,9 @@
+---
+- name: Setup UFW
+  ufw: state=enabled policy=deny
+- name: Allow ssh traffic
+  ufw: rule=allow port={{ item }} proto=tcp
+  with_items:
+  - "{{ SSHD_PORT }}"
+  # - "80"
+  # - "443"

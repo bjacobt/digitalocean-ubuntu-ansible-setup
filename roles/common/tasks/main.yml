@@ -1,0 +1,6 @@
+---
+- include: set_timezone.yml
+- include: create_user.yml
+- include: configure_ssh.yml
+- include: setup_ufw.yml
+- include: set_ansible_authorized_key.yml
